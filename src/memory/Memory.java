@@ -6,10 +6,7 @@
 package memory;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -23,15 +20,19 @@ public class Memory extends Application {
      StackPane root = new StackPane();
      Scene scene = new Scene(root,500,500);
      
-     primaryStage.setTitle("emory");
+     primaryStage.setTitle("Memory");
      primaryStage.setScene(scene);
      primaryStage.show();
+    
+    Tablero tablero = new Tablero(); 
+    
     }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
+        
     }
     
 }
