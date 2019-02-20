@@ -17,15 +17,17 @@ import javafx.stage.Stage;
 public class Memory extends Application {
     @Override
     public void start(Stage primaryStage) {
-     StackPane root = new StackPane();
-     Scene scene = new Scene(root,500,500);
-     
-     primaryStage.setTitle("Memory");
-     primaryStage.setScene(scene);
-     primaryStage.show();
-    
-    Tablero tablero = new Tablero(); 
-    
+        
+        Tablero tablero = new Tablero();
+        
+        StackPane root = new StackPane();
+        Scene scene = new Scene(root,900,900);
+        primaryStage.setTitle("Memory");
+        primaryStage.setScene(scene);
+        primaryStage.show(); 
+        
+         
+        root.getChildren().add(tablero.getGridTablero());
     }
     /**
      * @param args the command line arguments

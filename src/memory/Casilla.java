@@ -10,5 +10,14 @@ package memory;
  * @author Tomas
  */
 public class Casilla {
+    public char[][] matrizTablero = new char [4][4];
     
+    public void mostrarTablero() {
+        for(int y=0; y<4; y++) {
+            for(int x=0; x<4; x++) {
+                System.out.print(matrizTablero[x][y]);
+            }
+            System.out.println();
+        }
+    }
 }
