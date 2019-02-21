@@ -20,4 +20,16 @@ public class Casilla {
             System.out.println();
         }
     }
+    
+    public Casilla() {
+        for(int y=0; y<4; y++) {
+            for(int x=0; x<4; x++) {
+                matrizTablero[x][y] = '0';
+            }
+        }
+    }
+    
+    public void ponerRectangulo(int x, int y, char rectangulo) {
+        matrizTablero[x][y] = rectangulo;
+    }
 }
