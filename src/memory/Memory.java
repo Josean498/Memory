@@ -9,7 +9,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-
 /**
  *
  * @author Jose
@@ -27,8 +26,7 @@ public class Memory extends Application {
         primaryStage.show(); 
 
         root.getChildren().add(tablero.getGridTablero());
-        
-        
+
         Casilla casilla = new Casilla();
         casilla.mostrarTablero();
         System.out.println("");
@@ -48,7 +46,5 @@ public class Memory extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        
     }
-    
 }

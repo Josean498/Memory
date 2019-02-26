@@ -15,14 +15,14 @@ import javafx.scene.shape.Rectangle;
  */
 public class Tablero {
     GridPane gridTablero = new GridPane();
-    Image imageBurro = new Image(getClass().getResourceAsStream("img/burro.png"));
-    Image imageCastor = new Image(getClass().getResourceAsStream("img/castor.png"));
-    Image imageElefante = new Image(getClass().getResourceAsStream("img/elefante.png"));
-    Image imageFoca = new Image(getClass().getResourceAsStream("img/foca.png"));
-    Image imageGallina = new Image(getClass().getResourceAsStream("img/gallina.png"));
-    Image imageLeon = new Image(getClass().getResourceAsStream("img/leon.png"));
-    Image imageMono = new Image(getClass().getResourceAsStream("img/mono.png"));
-    Image imageOso = new Image(getClass().getResourceAsStream("img/oso.png"));
+    Image imageBurro = new Image(getClass().getResourceAsStream("/img/burro.png"));
+    Image imageCastor = new Image(getClass().getResourceAsStream("/img/castor.png"));
+    Image imageElefante = new Image(getClass().getResourceAsStream("/img/elefante.png"));
+    Image imageFoca = new Image(getClass().getResourceAsStream("/img/foca.png"));
+    Image imageGallina = new Image(getClass().getResourceAsStream("/img/gallina.png"));
+    Image imageLeon = new Image(getClass().getResourceAsStream("/img/leon.png"));
+    Image imageMono = new Image(getClass().getResourceAsStream("/img/mono.png"));
+    Image imageOso = new Image(getClass().getResourceAsStream("/img/oso.png"));
     
     public GridPane getGridTablero () {
         return gridTablero;
