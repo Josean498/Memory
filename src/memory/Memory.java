@@ -8,6 +8,7 @@ package memory;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
+import static javafx.scene.paint.Color.BLACK;
 import javafx.stage.Stage;
 /**
  *
@@ -17,29 +18,16 @@ public class Memory extends Application {
     @Override
     public void start(Stage primaryStage) {
         
-        Tablero tablero = new Tablero();
-
         StackPane root = new StackPane();
-        Scene scene = new Scene(root,900,900);
+        Scene scene = new Scene(root,800,800, BLACK);
         primaryStage.setTitle("Memory");
         primaryStage.setScene(scene);
         primaryStage.show(); 
 
-        root.getChildren().add(tablero.getGridTablero());
-
-        Casilla casilla = new Casilla();
+        TableroView casilla = new TableroView();
+        root.getChildren().add(casilla.getGridTablero());
         casilla.mostrarTablero();
-        System.out.println("");
-
-        casilla.ponerRectangulo(0, 0, 'B');
-        casilla.ponerRectangulo(1, 0, 'C');
-        casilla.ponerRectangulo(2, 0, 'E');
-        casilla.ponerRectangulo(3, 0, 'F');
-        casilla.ponerRectangulo(0, 1, 'G');
-        casilla.ponerRectangulo(1, 1, 'L');
-        casilla.ponerRectangulo(2, 1, 'M');
-        casilla.ponerRectangulo(3, 1, 'O');
-        casilla.mostrarTablero();
+        System.out.println("");        
     }
     /**
      * @param args the command line arguments
