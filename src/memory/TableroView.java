@@ -18,7 +18,7 @@ public class TableroView {
     public char[][] matrizTablero = new char [4][4];
     
     GridPane gridTablero = new GridPane();
-    private final double TAM_CASILLA = 200;
+    private final double TAM_CASILLA = 150;
     
      public GridPane getGridTablero () {
         return gridTablero;
@@ -33,20 +33,26 @@ public class TableroView {
             System.out.println();
         }
     }
-    
-    public void ponerRectangulo(int x, int y, char rectangulo) {
-        matrizTablero[x][y] = rectangulo;
-    }
-    
+
      private void rellenarCasilla(int x, int y) {
         // Dibujar casillas como un cuadrado 
         Rectangle r = new Rectangle(TAM_CASILLA, TAM_CASILLA, Color.GREEN);
         r.setStroke(Color.BLACK);
         gridTablero.add(r, x, y);
-        gridTablero.setHgap(5);
-        gridTablero.setVgap(5);
     }    
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

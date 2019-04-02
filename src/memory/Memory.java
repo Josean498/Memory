@@ -6,9 +6,12 @@
 package memory;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import static javafx.scene.paint.Color.BLACK;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 /**
  *
@@ -17,17 +20,38 @@ import javafx.stage.Stage;
 public class Memory extends Application {
     @Override
     public void start(Stage primaryStage) {
+
+        TableroView tableroView = new TableroView();
         
-        StackPane root = new StackPane();
-        Scene scene = new Scene(root,800,800, BLACK);
+        // Contenedor para alinear el tablero en centro horizontalmente
+        HBox hBox = new HBox(tableroView.getGridTablero());
+        hBox.setAlignment(Pos.CENTER);
+        
+        // Contenedor secundario para alinear los botones en centro horizontalmente
+        HBox hBoxBotones = new HBox(); 
+        hBoxBotones.setPadding(new Insets(15, 12, 15, 12));
+        hBoxBotones.setSpacing(10);
+        hBoxBotones.setAlignment(Pos.CENTER);
+        
+        Button buttonJugar = new Button("Jugar");
+        buttonJugar.setPrefSize(100, 20);
+
+        Button buttonSalir = new Button("Salir");
+        buttonSalir.setPrefSize(100, 20);
+        hBoxBotones.getChildren().addAll(buttonJugar, buttonSalir);
+        
+        // Contenedor principal será de tipo VBox para centrar tablero verticalmente
+        VBox root = new VBox();
+        root.setAlignment(Pos.CENTER);
+        root.getChildren().add(hBoxBotones);
+        root.getChildren().add(hBox);
+        Scene scene = new Scene(root, 700, 700);
         primaryStage.setTitle("Memory");
         primaryStage.setScene(scene);
-        primaryStage.show(); 
+        primaryStage.show();
 
-        TableroView casilla = new TableroView();
-        root.getChildren().add(casilla.getGridTablero());
-        casilla.mostrarTablero();
-        System.out.println("");        
+        tableroView.mostrarTablero();
+        System.out.println("");
     }
     /**
      * @param args the command line arguments
