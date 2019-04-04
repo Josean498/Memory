@@ -5,7 +5,7 @@
  */
 package memory;
 
-//import javafx.scene.image.Image;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -15,6 +15,7 @@ import javafx.scene.shape.Rectangle;
  * @author José
  */
 public class TableroView {
+
     public char[][] matrizTablero = new char [4][4];
     
     GridPane gridTablero = new GridPane();
@@ -39,24 +40,9 @@ public class TableroView {
         Rectangle r = new Rectangle(TAM_CASILLA, TAM_CASILLA, Color.GREEN);
         r.setStroke(Color.BLACK);
         gridTablero.add(r, x, y);
-    }    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+     
+     
 //    Image imageBurro = new Image(getClass().getResourceAsStream("/img/burro.png"));
 //    Image imageCastor = new Image(getClass().getResourceAsStream("/img/castor.png"));
 //    Image imageElefante = new Image(getClass().getResourceAsStream("/img/elefante.png"));
@@ -65,40 +51,31 @@ public class TableroView {
 //    Image imageLeon = new Image(getClass().getResourceAsStream("/img/leon.png"));
 //    Image imageMono = new Image(getClass().getResourceAsStream("/img/mono.png"));
 //    Image imageOso = new Image(getClass().getResourceAsStream("/img/oso.png"));
-    
 //    public void ponerFoto() {
 //        
-//        Casilla casilla = new Casilla();
+//        TableroView casilla = new TableroView();
 //        Group groupTablero = new Group();
-
+//
 //        for(int y=0; y<4; y++) {
 //            for(int x=0; x<4; x++) {
 //                switch(casilla.matrizTablero[x][y]) {
-//                    case 'B':
-//                        // Hacer un grupo con el gridTablero en todos los casos!!!!
-//                        Rectangle rectangle = new Rectangle(40, 60);    
+//                    case 'B':   
 //                        ImageView imageBurro1 = new ImageView(imageBurro);
-//                        gridTablero.add(rectangle, x, y);
+//                        //gridTablero.add(rectangle, x, y);
 //                        gridTablero.add(imageBurro1, x, x);
-//                        groupTablero.getChildren().add(rectangle);
 //                        groupTablero.getChildren().add(imageBurro1);
 //                        break;
 //                    case 'C' :
-//                        Rectangle rectangle2 = new Rectangle(40, 60); 
 //                        ImageView imageCastor1 = new ImageView(imageCastor);                        
-//                        gridTablero.add(rectangle2, x, y);
 //                        gridTablero.add(imageCastor1, x, x);
 //                        break;   
 //                    case 'E' :
-//                        Rectangle rectangle3 = new Rectangle(40, 60);
 //                        ImageView imageElefante1 = new ImageView(imageElefante);
-//                        gridTablero.add(rectangle3, x, y);
 //                        gridTablero.add(imageElefante1, x, x);
 //                        break;
 //                    case 'F' :
-//                        Rectangle rectangle4 = new Rectangle(40, 60);
 //                        ImageView imageFoca1 = new ImageView(imageFoca);
-//                        gridTablero.add(rectangle4, x, y);
+//
 //                        gridTablero.add(imageFoca1, x, x);
 //                        break;
 //                    case 'G' :
@@ -128,5 +105,25 @@ public class TableroView {
 //                }
 //            }
 //        }   
-        
 //    }
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
