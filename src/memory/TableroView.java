@@ -14,7 +14,12 @@ import javafx.scene.shape.Rectangle;
  * @author José
  */
 public class TableroView {
-
+    
+    // Varibles atributos.
+    int fila = 4;
+    int columna = 4;
+    
+    
     public char[][] matrizTablero = new char [4][4];
     int filas = 4;
     int columnas = 4;
@@ -30,6 +35,17 @@ public class TableroView {
         for(int y=0; y< columnas; y++) {
             for(int x=0; x< filas; x++) {
                 System.out.print(matrizTablero[x][y]);
+                rellenarCasilla(x, y);
+            }
+            System.out.println();
+        }
+    }
+    
+    public void mostrarTableroOut() {
+        for(int y=0; y<fila; y++) {
+            for(int x=0; x<columna; x++) {
+                System.out.print(matrizTablero[x][y]);
+                
                 rellenarCasilla(x, y);
             }
             System.out.println();

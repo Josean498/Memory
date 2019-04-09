@@ -5,7 +5,10 @@
  */
 package memory;
 
+
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -35,25 +38,43 @@ public class Memory extends Application {
         hBoxBotones.setSpacing(10);
         hBoxBotones.setAlignment(Pos.CENTER);
         
-        Button buttonJugar = new Button("Jugar");
-        buttonJugar.setPrefSize(100, 20);
+        Button buttonPlay = new Button("Jugar");
+        buttonPlay.setPrefSize(100, 20);
 
-        Button buttonSalir = new Button("Salir");
+        Button buttonSalir = new Button("Reiniciar");
         buttonSalir.setPrefSize(100, 20);
-        hBoxBotones.getChildren().addAll(buttonJugar, buttonSalir);
+        hBoxBotones.getChildren().addAll(buttonPlay, buttonSalir);
         
         // Contenedor principal será de tipo VBox para centrar tablero verticalmente
         VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
+        root.getChildren().add(hBoxBotones);
+        root.getChildren().add(hBox);
         
-        Scene scene = new Scene(root, 700, 700);
+        Scene scene = new Scene(root, 800, 800);
         primaryStage.setTitle("Memory");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        Image fondoInicio = new Image(getClass().getResourceAsStream("img/fondoInicio.png"));
+        ImageView fondoInicio1 = new ImageView(fondoInicio);
+        root.getChildren().add(fondoInicio1);
 
         tableroView.mostrarTablero();
-        System.out.println("");
+        System.out.println("Has Perdido");
+        
+        // Creamos el evento para empezar la partida con el boton Jugar.
+        buttonPlay.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                
+                //System.out.println("Hello World!");
+            }
+        
+        });
     }
+    
     /**
      * @param args the command line arguments
      */
