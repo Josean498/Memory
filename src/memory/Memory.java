@@ -10,6 +10,8 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -43,8 +45,7 @@ public class Memory extends Application {
         // Contenedor principal será de tipo VBox para centrar tablero verticalmente
         VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
-        root.getChildren().add(hBoxBotones);
-        root.getChildren().add(hBox);
+        
         Scene scene = new Scene(root, 700, 700);
         primaryStage.setTitle("Memory");
         primaryStage.setScene(scene);

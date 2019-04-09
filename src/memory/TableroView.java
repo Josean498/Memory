@@ -5,7 +5,6 @@
  */
 package memory;
 
-import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -17,6 +16,8 @@ import javafx.scene.shape.Rectangle;
 public class TableroView {
 
     public char[][] matrizTablero = new char [4][4];
+    int filas = 4;
+    int columnas = 4;
     
     GridPane gridTablero = new GridPane();
     private final double TAM_CASILLA = 150;
@@ -26,8 +27,8 @@ public class TableroView {
     }
     
     public void mostrarTablero() {
-        for(int y=0; y<4; y++) {
-            for(int x=0; x<4; x++) {
+        for(int y=0; y< columnas; y++) {
+            for(int x=0; x< filas; x++) {
                 System.out.print(matrizTablero[x][y]);
                 rellenarCasilla(x, y);
             }
